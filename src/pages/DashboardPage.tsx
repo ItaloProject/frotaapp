@@ -26,7 +26,6 @@ import { useFleet } from '../frota/FleetContext'
 import { useTheme } from '../theme/ThemeProvider'
 import { useApontamentos } from '../apontamentos/ApontamentosContext'
 import { buildManageTableRows, type ApontamentoGroup } from '../apontamentos/groupApontamentos'
-import { supabase } from '../lib/supabase'
 import type { DashboardAdesaoChartRow } from './DashboardAdesaoCharts'
 
 const LazyDashboardAdesaoCharts = lazy(() =>
@@ -120,23 +119,7 @@ function computePeriodoLimites(
   }
 }
 
-function normalizePlacaDashboard(s: string): string {
-  return s.trim().toUpperCase().replace(/[^A-Z0-9]/g, '')
-}
 
-function checklistMatchesDashboardBase(
-  dadosVeiculo: unknown,
-  baseFilter: string,
-  placaParaBase: Map<string, string>,
-): boolean {
-  if (baseFilter === 'todos') return true
-  const o = dadosVeiculo && typeof dadosVeiculo === 'object' ? (dadosVeiculo as Record<string, unknown>) : null
-  const placa = normalizePlacaDashboard(String(o?.placa ?? ''))
-  if (!placa) return false
-  const baseVeiculo = placaParaBase.get(placa)
-  if (!baseVeiculo) return false
-  return baseVeiculo.toLowerCase().includes(baseFilter.toLowerCase())
-}
 
 function fmtChartLabel(chartMode: DashboardChartLabelMode, dateStr: string): string {
   const d = new Date(dateStr + 'T00:00:00')
@@ -264,37 +247,13 @@ export function DashboardPage() {
   const [checklistsPorDia, setChecklistsPorDia] = useState<{ data: string; realizados: number; comNc: number }[]>([])
 
   useEffect(() => {
-    const hojeIso = hojeLocalIso()
-    const fimFetchIso = periodoFimIso < hojeIso ? hojeIso : periodoFimIso
-
-    void supabase
-      .from('checklists')
-      .select('data_inspecao, nc_count, dados_veiculo')
-      .eq('progresso', 100)
-      .gte('data_inspecao', periodoInicioIso)
-      .lte('data_inspecao', fimFetchIso)
-      .order('data_inspecao', { ascending: true })
-      .then(({ data }: { data: Array<{ data_inspecao: string; nc_count: number; dados_veiculo: Record<string, string> }> | null }) => {
-        if (!data) {
-          setChecklistsPorDia([])
-          return
-        }
-        const map = new Map<string, { realizados: number; comNc: number }>()
-        for (const row of data) {
-          if (!checklistMatchesDashboardBase(row.dados_veiculo, filtroBase, placaParaBaseOperacional)) {
-            continue
-          }
-          const dia = (row.data_inspecao as string).slice(0, 10)
-          const prev = map.get(dia) ?? { realizados: 0, comNc: 0 }
-          map.set(dia, {
-            realizados: prev.realizados + 1,
-            comNc: prev.comNc + ((row.nc_count as number) > 0 ? 1 : 0),
-          })
-        }
-        setChecklistsPorDia(
-          Array.from(map.entries()).map(([data, v]) => ({ data, ...v })),
-        )
-      })
+    // Modo demo: usa dados mock do portfólio
+    void import('../apontamentos/mockData').then(({ MOCK_CHECKLISTS_POR_DIA }) => {
+      const filtered = MOCK_CHECKLISTS_POR_DIA.filter(
+        (r) => r.data >= periodoInicioIso && r.data <= periodoFimIso,
+      )
+      setChecklistsPorDia(filtered)
+    })
   }, [periodoInicioIso, periodoFimIso, filtroBase, placaParaBaseOperacional])
 
   const { rows } = useApontamentos()

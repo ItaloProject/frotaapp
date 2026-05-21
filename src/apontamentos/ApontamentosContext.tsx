@@ -235,7 +235,16 @@ export function ApontamentosProvider({ children }: { children: ReactNode }) {
     setCarregando(true)
     localStorage.removeItem('frota-apontamentos-v1')
 
+    // Modo demo: retorna dados fictícios sem acesso ao Supabase
+    const { MOCK_APONTAMENTOS, MOCK_CHECKLISTS_REALIZADOS_TOTAL } = await import('./mockData')
+    setRows(MOCK_APONTAMENTOS)
+    setChecklistsRealizadosTotal(MOCK_CHECKLISTS_REALIZADOS_TOTAL)
+    setPersistError(null)
+    setCarregando(false)
+    return
+
     // 1. Total de checklists concluídos (mesmo critério do formulário: progresso 100)
+    // eslint-disable-next-line no-unreachable
     const { count: totalRealizados, error: countError } = await supabase
       .from('checklists')
       .select('id', { count: 'exact', head: true })
