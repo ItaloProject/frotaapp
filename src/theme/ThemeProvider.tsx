@@ -20,8 +20,7 @@ function applyThemeClass(theme: ThemeMode) {
 function getInitialTheme(): ThemeMode {
   const stored = localStorage.getItem(STORAGE_KEY)
   if (stored === 'light' || stored === 'dark') return stored
-  const prefersDark = window.matchMedia?.('(prefers-color-scheme: dark)').matches
-  return prefersDark ? 'dark' : 'light'
+  return 'dark'
 }
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {

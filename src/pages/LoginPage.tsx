@@ -185,7 +185,7 @@ export function LoginPage() {
 
   return (
     <div
-      className={`relative flex min-h-dvh w-full flex-col overflow-y-auto transition-colors duration-500 lg:h-dvh lg:min-h-0 lg:flex-row lg:overflow-hidden ${isDark ? 'bg-slate-950' : 'bg-slate-50'}`}
+      className={`relative flex min-h-dvh w-full flex-col overflow-y-auto transition-colors duration-500 lg:h-dvh lg:min-h-0 lg:flex-row lg:overflow-hidden ${isDark ? 'bg-[#0d1117]' : 'bg-slate-50'}`}
     >
       <button
         type="button"
@@ -210,9 +210,9 @@ export function LoginPage() {
       </div>
 
       <div className="relative z-10 hidden h-full w-full shrink-0 overflow-hidden bg-[#0B1120] lg:block lg:w-[440px] xl:w-[500px] 2xl:w-[520px]">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_18%,rgba(181,22,73,0.38),transparent_28%),radial-gradient(circle_at_22%_48%,rgba(30,64,175,0.32),transparent_34%),linear-gradient(180deg,#0b1020_0%,#07101f_48%,#030712_100%)]" />
-        <div className="pointer-events-none absolute -right-28 top-20 h-72 w-72 rotate-45 rounded-[3rem] border border-rose-400/20 bg-[#b51649]/15 shadow-[0_0_90px_rgba(181,22,73,0.22)]" />
-        <div className="pointer-events-none absolute -left-24 bottom-16 h-64 w-64 rotate-45 rounded-[3rem] border border-rose-300/10 bg-[#7f1022]/20 blur-[1px]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_18%,rgba(6,182,212,0.22),transparent_30%),radial-gradient(circle_at_20%_55%,rgba(16,185,129,0.18),transparent_35%),linear-gradient(180deg,#0d1117_0%,#0b1120_50%,#030712_100%)]" />
+        <div className="pointer-events-none absolute -right-28 top-20 h-72 w-72 rotate-45 rounded-[3rem] border border-cyan-400/20 bg-cyan-500/10 shadow-[0_0_90px_rgba(6,182,212,0.18)]" />
+        <div className="pointer-events-none absolute -left-24 bottom-16 h-64 w-64 rotate-45 rounded-[3rem] border border-emerald-400/10 bg-emerald-500/10 blur-[1px]" />
         <LoginFluxVisual reduced={reducedMotion} />
 
         <div className="relative z-10 flex h-full min-h-0 flex-col justify-between p-6 text-white sm:p-7 lg:p-9 xl:p-10 2xl:p-12">
@@ -220,21 +220,21 @@ export function LoginPage() {
             <CollapsedNavMark size="md" className="ring-2 ring-white/15 xl:h-12 xl:w-12" />
             <div>
               <BrandLogo tone="on-dark" variant="horizontal" className="!h-10 !max-h-10 !max-w-[220px] xl:!h-12 xl:!max-h-12 xl:!max-w-[260px]" />
-              <div className="mt-1.5 h-0.5 w-32 rounded-full bg-gradient-to-r from-[#b51649] via-rose-400 to-sky-400 xl:mt-2 xl:h-1 xl:w-36" />
+              <div className="mt-1.5 h-0.5 w-32 rounded-full bg-gradient-to-r from-cyan-400 via-cyan-300 to-emerald-400 xl:mt-2 xl:h-1 xl:w-36" />
             </div>
           </div>
 
           <div className="space-y-4 py-4 lg:space-y-5 lg:py-5 xl:space-y-6 2xl:space-y-7 2xl:py-8">
-            <div className="inline-flex items-center gap-2 rounded-full border border-rose-300/20 bg-rose-500/10 px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.24em] text-rose-100">
-              <span className="h-2 w-2 rounded-full bg-[#b51649] shadow-[0_0_14px_rgba(244,63,94,0.75)]" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/25 bg-cyan-500/10 px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.24em] text-cyan-100">
+              <span className="h-2 w-2 rounded-full bg-cyan-400 shadow-[0_0_14px_rgba(6,182,212,0.75)]" />
               Portal FrotaApp
             </div>
             <h2 className="text-balance text-4xl font-black leading-[1.02] tracking-tight lg:text-5xl 2xl:text-6xl">
               <span className="text-white">Sua frota sob</span>
               <br />
-              <span className="bg-gradient-to-r from-[#fb7185] via-[#f43f5e] to-[#b51649] bg-clip-text text-transparent">controle</span>
+              <span className="bg-gradient-to-r from-cyan-300 via-cyan-400 to-cyan-500 bg-clip-text text-transparent">controle</span>
               <br />
-              <span className="bg-gradient-to-r from-sky-300 via-cyan-300 to-white bg-clip-text text-transparent">total.</span>
+              <span className="bg-gradient-to-r from-emerald-300 via-emerald-400 to-white bg-clip-text text-transparent">total.</span>
             </h2>
             <p className="max-w-sm text-xs font-semibold leading-relaxed text-slate-300 lg:text-sm">
               Checklists, apontamentos e acompanhamento operacional com controle total.
@@ -242,11 +242,11 @@ export function LoginPage() {
 
             <div className="grid grid-cols-2 gap-2 text-[11px] font-extrabold text-slate-200 xl:gap-3 xl:text-xs">
               <div className="rounded-2xl border border-white/10 bg-white/[0.06] px-3 py-2.5 backdrop-blur xl:py-3">
-                <span className="block text-[9px] uppercase tracking-widest text-rose-200 xl:text-[10px]">Operação</span>
+                <span className="block text-[9px] uppercase tracking-widest text-cyan-200 xl:text-[10px]">Operação</span>
                 Frota conectada
               </div>
               <div className="rounded-2xl border border-white/10 bg-white/[0.06] px-3 py-2.5 backdrop-blur xl:py-3">
-                <span className="block text-[9px] uppercase tracking-widest text-rose-200 xl:text-[10px]">Checklists</span>
+                <span className="block text-[9px] uppercase tracking-widest text-emerald-200 xl:text-[10px]">Checklists</span>
                 Online e offline
               </div>
             </div>
@@ -255,13 +255,13 @@ export function LoginPage() {
 
           <div className="flex items-center justify-between gap-4 text-[10px] font-black uppercase tracking-[0.3em] text-slate-500 xl:text-[11px]">
             <span>FrotaApp — gestão de frota</span>
-            <span className="h-px flex-1 bg-gradient-to-r from-[#b51649] to-transparent" />
+            <span className="h-px flex-1 bg-gradient-to-r from-cyan-500 to-transparent" />
           </div>
         </div>
       </div>
 
       <div
-        className={`relative z-10 flex flex-1 flex-col items-center justify-start overflow-y-auto px-4 pb-24 pt-20 transition-colors duration-500 sm:px-8 sm:pt-24 lg:h-full lg:min-h-0 lg:justify-center lg:py-10 lg:pb-12 ${isDark ? 'bg-slate-950' : 'bg-white'}`}
+        className={`relative z-10 flex flex-1 flex-col items-center justify-start overflow-y-auto px-4 pb-24 pt-20 transition-colors duration-500 sm:px-8 sm:pt-24 lg:h-full lg:min-h-0 lg:justify-center lg:py-10 lg:pb-12 ${isDark ? 'bg-[#0d1117]' : 'bg-white'}`}
       >
         <div className="mb-8 flex w-full max-w-[380px] shrink-0 items-center justify-center rounded-3xl border border-slate-200 bg-white/80 px-4 py-4 shadow-sm dark:border-slate-800 dark:bg-slate-900/60 lg:hidden">
           <CollapsedNavMark size="md" className="mr-3" />
@@ -289,7 +289,7 @@ export function LoginPage() {
                   <button
                     type="button"
                     onClick={() => { setRecovering(false); setRecoverySent(false); setRecoveryEmail('') }}
-                    className="mt-1 text-[11px] font-black text-[#b51649] hover:underline dark:text-rose-300"
+                    className="mt-1 text-[11px] font-black text-cyan-600 hover:underline dark:text-cyan-400"
                   >
                     Voltar para o login
                   </button>
@@ -297,11 +297,11 @@ export function LoginPage() {
               ) : (
                 <form onSubmit={(e) => void onRecoverySubmit(e)} className="space-y-4 xl:space-y-5">
                   <div className="group space-y-2">
-                    <label htmlFor="recovery-email" className="ml-1 text-[11px] font-black uppercase tracking-widest text-slate-400 transition-colors group-focus-within:text-[#b51649]">
+                    <label htmlFor="recovery-email" className="ml-1 text-[11px] font-black uppercase tracking-widest text-slate-400 transition-colors group-focus-within:text-cyan-500">
                       E-mail corporativo
                     </label>
                     <div className="relative">
-                      <Mail className="pointer-events-none absolute left-4 top-1/2 size-[18px] -translate-y-1/2 text-slate-400 transition-colors group-focus-within:text-[#b51649]" aria-hidden />
+                      <Mail className="pointer-events-none absolute left-4 top-1/2 size-[18px] -translate-y-1/2 text-slate-400 transition-colors group-focus-within:text-cyan-500" aria-hidden />
                       <input
                         id="recovery-email"
                         name="email"
@@ -311,7 +311,7 @@ export function LoginPage() {
                         value={recoveryEmail}
                         onChange={(e) => setRecoveryEmail(e.target.value)}
                         disabled={recoveryPending}
-                        className={`w-full rounded-2xl border py-3.5 pl-12 pr-4 text-sm font-bold outline-none transition-all focus:border-[#b51649] focus:ring-4 focus:ring-rose-500/10 disabled:opacity-60 xl:py-4 ${isDark ? 'border-slate-800 bg-slate-900 text-white focus:bg-slate-950' : 'border-slate-200 bg-slate-50/80 text-slate-900 focus:bg-white'}`}
+                        className={`w-full rounded-2xl border py-3.5 pl-12 pr-4 text-sm font-bold outline-none transition-all focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 disabled:opacity-60 xl:py-4 ${isDark ? 'border-slate-800/80 bg-[#161b22] text-white focus:bg-[#0d1117]' : 'border-slate-200 bg-slate-50/80 text-slate-900 focus:bg-white'}`}
                         placeholder="voce@empresa.com.br"
                       />
                     </div>
@@ -326,7 +326,7 @@ export function LoginPage() {
                   <button
                     type="submit"
                     disabled={recoveryPending}
-                    className="group relative flex min-h-[52px] w-full items-center justify-center gap-3 overflow-hidden rounded-2xl bg-gradient-to-r from-[#7f1022] via-[#9f1239] to-[#b51649] py-3.5 text-base font-black text-white shadow-xl shadow-rose-950/15 transition-all hover:brightness-110 active:scale-[0.98] disabled:opacity-50 xl:min-h-[56px] xl:py-4"
+                    className="group relative flex min-h-[52px] w-full items-center justify-center gap-3 overflow-hidden rounded-2xl bg-gradient-to-r from-cyan-600 via-cyan-500 to-emerald-500 py-3.5 text-base font-black text-white shadow-xl shadow-cyan-950/20 transition-all hover:brightness-110 active:scale-[0.98] disabled:opacity-50 xl:min-h-[56px] xl:py-4"
                   >
                     {recoveryPending ? <Loader2 className="animate-spin" size={24} /> : 'Enviar link de recuperação'}
                   </button>
@@ -351,7 +351,7 @@ export function LoginPage() {
               </header>
 
               {/* Credenciais demo */}
-              <div className={`mb-6 rounded-2xl border p-4 text-xs font-semibold ${isDark ? 'border-slate-700 bg-slate-900/60 text-slate-300' : 'border-slate-200 bg-slate-50 text-slate-600'}`}>
+              <div className={`mb-6 rounded-2xl border p-4 text-xs font-semibold ${isDark ? 'border-slate-800/80 bg-[#161b22] text-slate-300' : 'border-slate-200 bg-slate-50 text-slate-600'}`}>
                 <p className={`mb-2 text-[10px] font-black uppercase tracking-widest ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>Acesso demo</p>
                 <div className="space-y-1">
                   {[
@@ -363,10 +363,10 @@ export function LoginPage() {
                       key={e}
                       type="button"
                       onClick={() => { setEmail(e); setPassword(pass) }}
-                      className={`flex w-full items-center gap-2 rounded-xl px-3 py-2 text-left transition hover:bg-[#b51649]/10 ${isDark ? 'hover:text-white' : 'hover:text-slate-900'}`}
+                      className={`flex w-full items-center gap-2 rounded-xl px-3 py-2 text-left transition hover:bg-cyan-500/10 ${isDark ? 'hover:text-white' : 'hover:text-slate-900'}`}
                     >
                       <span className={`w-20 shrink-0 text-[10px] font-black uppercase tracking-wide ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>{label}</span>
-                      <span className="font-bold text-[#b51649]">{e}</span>
+                      <span className="font-bold text-cyan-500 dark:text-cyan-400">{e}</span>
                       <span className={isDark ? 'text-slate-500' : 'text-slate-400'}>/</span>
                       <span className="font-mono font-bold">{pass}</span>
                     </button>
@@ -385,12 +385,12 @@ export function LoginPage() {
 
               <form onSubmit={(e) => void onSubmit(e)} className="space-y-4 xl:space-y-5">
                 <div className="group space-y-2">
-                  <label htmlFor="login-email" className="ml-1 text-[11px] font-black uppercase tracking-widest text-slate-400 transition-colors group-focus-within:text-[#b51649]">
+                  <label htmlFor="login-email" className="ml-1 text-[11px] font-black uppercase tracking-widest text-slate-400 transition-colors group-focus-within:text-cyan-500">
                     E-mail corporativo
                   </label>
                   <div className="relative">
                     <Mail
-                      className="pointer-events-none absolute left-4 top-1/2 size-[18px] -translate-y-1/2 text-slate-400 transition-colors group-focus-within:text-[#b51649]"
+                      className="pointer-events-none absolute left-4 top-1/2 size-[18px] -translate-y-1/2 text-slate-400 transition-colors group-focus-within:text-cyan-500"
                       aria-hidden
                     />
                     <input
@@ -402,7 +402,7 @@ export function LoginPage() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       disabled={pending}
-                      className={`w-full rounded-2xl border py-3.5 pl-12 pr-4 text-sm font-bold outline-none transition-all focus:border-[#b51649] focus:ring-4 focus:ring-rose-500/10 disabled:opacity-60 xl:py-4 ${isDark ? 'border-slate-800 bg-slate-900 text-white focus:bg-slate-950' : 'border-slate-200 bg-slate-50/80 text-slate-900 focus:bg-white'}`}
+                      className={`w-full rounded-2xl border py-3.5 pl-12 pr-4 text-sm font-bold outline-none transition-all focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 disabled:opacity-60 xl:py-4 ${isDark ? 'border-slate-800/80 bg-[#161b22] text-white focus:bg-[#0d1117]' : 'border-slate-200 bg-slate-50/80 text-slate-900 focus:bg-white'}`}
                       placeholder="voce@empresa.com.br"
                     />
                   </div>
@@ -410,20 +410,20 @@ export function LoginPage() {
 
                 <div className="group space-y-2">
                   <div className="ml-1 flex items-center justify-between">
-                    <label htmlFor="login-password" className="text-[11px] font-black uppercase tracking-widest text-slate-400 transition-colors group-focus-within:text-[#b51649]">
+                    <label htmlFor="login-password" className="text-[11px] font-black uppercase tracking-widest text-slate-400 transition-colors group-focus-within:text-cyan-500">
                       Senha
                     </label>
                     <button
                       type="button"
                       onClick={() => { setRecovering(true); setRecoveryEmail(email); setRecoveryError(null); setRecoverySent(false) }}
-                      className="text-[11px] font-black text-[#b51649] hover:underline dark:text-rose-300"
+                      className="text-[11px] font-black text-cyan-600 hover:underline dark:text-cyan-400"
                     >
                       Recuperar
                     </button>
                   </div>
                   <div className="relative">
                     <Lock
-                      className="pointer-events-none absolute left-4 top-1/2 size-[18px] -translate-y-1/2 text-slate-400 transition-colors group-focus-within:text-[#b51649]"
+                      className="pointer-events-none absolute left-4 top-1/2 size-[18px] -translate-y-1/2 text-slate-400 transition-colors group-focus-within:text-cyan-500"
                       aria-hidden
                     />
                     <input
@@ -435,7 +435,7 @@ export function LoginPage() {
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                       disabled={pending}
-                      className={`w-full rounded-2xl border py-3.5 pl-12 pr-12 text-sm font-bold outline-none transition-all focus:border-[#b51649] focus:ring-4 focus:ring-rose-500/10 disabled:opacity-60 xl:py-4 ${isDark ? 'border-slate-800 bg-slate-900 text-white focus:bg-slate-950' : 'border-slate-200 bg-slate-50/80 text-slate-900 focus:bg-white'}`}
+                      className={`w-full rounded-2xl border py-3.5 pl-12 pr-12 text-sm font-bold outline-none transition-all focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 disabled:opacity-60 xl:py-4 ${isDark ? 'border-slate-800/80 bg-[#161b22] text-white focus:bg-[#0d1117]' : 'border-slate-200 bg-slate-50/80 text-slate-900 focus:bg-white'}`}
                       placeholder="••••••••"
                     />
                     <button
@@ -459,7 +459,7 @@ export function LoginPage() {
                 <button
                   type="submit"
                   disabled={pending}
-                  className="group relative flex min-h-[52px] w-full items-center justify-center gap-3 overflow-hidden rounded-2xl bg-gradient-to-r from-[#7f1022] via-[#9f1239] to-[#b51649] py-3.5 text-base font-black text-white shadow-xl shadow-rose-950/15 transition-all hover:brightness-110 active:scale-[0.98] disabled:opacity-50 xl:min-h-[56px] xl:py-4"
+                  className="group relative flex min-h-[52px] w-full items-center justify-center gap-3 overflow-hidden rounded-2xl bg-gradient-to-r from-cyan-600 via-cyan-500 to-emerald-500 py-3.5 text-base font-black text-white shadow-xl shadow-cyan-950/20 transition-all hover:brightness-110 active:scale-[0.98] disabled:opacity-50 xl:min-h-[56px] xl:py-4"
                 >
                   {pending ? (
                     <Loader2 className="animate-spin" size={24} />
@@ -485,7 +485,7 @@ export function LoginPage() {
             href={SOCIAL_LINKS.developer.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="pointer-events-auto inline-flex items-center gap-1.5 text-slate-600 transition hover:text-[#9f1239] hover:underline dark:text-slate-400 dark:hover:text-rose-300"
+            className="pointer-events-auto inline-flex items-center gap-1.5 text-slate-600 transition hover:text-cyan-600 hover:underline dark:text-slate-400 dark:hover:text-cyan-400"
             title={`Instagram ${SOCIAL_LINKS.developer.label}`}
           >
             <InstagramIcon size={12} />
@@ -495,11 +495,11 @@ export function LoginPage() {
         <div>
           <span>© {new Date().getFullYear()} Italo Bruno da Silva Fontes · Todos os direitos reservados.</span>
           <span className="mx-2 text-slate-400">·</span>
-          <Link to="/termos" className="pointer-events-auto text-[#9f1239] hover:underline dark:text-rose-300">
+          <Link to="/termos" className="pointer-events-auto text-cyan-600 hover:underline dark:text-cyan-400">
             Termos
           </Link>
           <span className="mx-1 text-slate-400">/</span>
-          <Link to="/privacidade" className="pointer-events-auto text-[#9f1239] hover:underline dark:text-rose-300">
+          <Link to="/privacidade" className="pointer-events-auto text-cyan-600 hover:underline dark:text-cyan-400">
             Privacidade
           </Link>
         </div>

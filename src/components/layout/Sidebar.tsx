@@ -32,7 +32,7 @@ export function Sidebar({
       <aside
         data-tour="sidebar"
         className={[
-          'hidden h-full shrink-0 border-r border-slate-200 bg-white md:flex md:flex-col dark:border-slate-800 dark:bg-slate-950',
+          'hidden h-full shrink-0 border-r border-slate-200 bg-white md:flex md:flex-col dark:border-slate-800/60 dark:bg-[#0d1117]',
           'transition-[width] duration-200 ease-out',
           collapsed ? 'w-20' : 'w-72',
         ].join(' ')}
@@ -49,7 +49,7 @@ export function Sidebar({
           onClick={onClose}
           aria-label="Fechar menu"
         />
-        <aside className="fixed left-0 top-0 z-50 h-full w-80 max-w-[85vw] border-r border-slate-200 bg-white shadow-soft dark:border-slate-800 dark:bg-slate-950">
+        <aside className="fixed left-0 top-0 z-50 h-full w-80 max-w-[85vw] border-r border-slate-200 bg-white shadow-soft dark:border-slate-800/60 dark:bg-[#0d1117]">
           <div className="flex h-14 items-center justify-between px-5">
             <div className="flex min-w-0 flex-1 items-center gap-2">
               <BrandLogo tone={navTone} variant="horizontal" />
@@ -121,22 +121,18 @@ function Nav({ collapsed, onNavigate }: { collapsed: boolean; onNavigate: () => 
                   collapsed ? 'justify-center' : 'gap-3',
                   'transition-all duration-150',
                   isActive
-                    // Ativo: fundo sutil com borda interna colorida + texto brilhante
-                    ? 'bg-brand-600/10 text-brand-600 dark:bg-brand-500/10 dark:text-brand-400 ring-1 ring-inset ring-brand-600/20 dark:ring-brand-500/20'
-                    // Inativo: texto atenuado, hover apenas clareia levemente (sem fundo pesado)
-                    : 'text-slate-500 hover:bg-slate-100/70 hover:text-slate-700 dark:text-slate-400 dark:hover:bg-slate-800/50 dark:hover:text-slate-200',
+                    ? 'bg-cyan-500/10 text-cyan-600 dark:bg-cyan-400/10 dark:text-cyan-400 ring-1 ring-inset ring-cyan-500/20 dark:ring-cyan-400/20'
+                    : 'text-slate-500 hover:bg-slate-100/70 hover:text-slate-700 dark:text-slate-400 dark:hover:bg-slate-800/40 dark:hover:text-slate-200',
                 ].join(' ')
               }
             >
               <span
                 className={[
                   'grid h-9 w-9 shrink-0 place-items-center rounded-xl transition-colors duration-150',
-                  // Ativo: ícone com fundo colorido
-                  'group-[&[aria-current=page]]:bg-brand-600/15 group-[&[aria-current=page]]:text-brand-600',
-                  'group-[&[aria-current=page]]:dark:bg-brand-500/15 group-[&[aria-current=page]]:dark:text-brand-400',
-                  // Inativo: fundo neutro, hover clareia
+                  'group-[&[aria-current=page]]:bg-cyan-500/15 group-[&[aria-current=page]]:text-cyan-600',
+                  'group-[&[aria-current=page]]:dark:bg-cyan-400/15 group-[&[aria-current=page]]:dark:text-cyan-400',
                   'bg-transparent text-slate-500 group-hover:bg-slate-200/60 group-hover:text-slate-700',
-                  'dark:text-slate-400 dark:group-hover:bg-slate-700/40 dark:group-hover:text-slate-200',
+                  'dark:text-slate-400 dark:group-hover:bg-slate-800/60 dark:group-hover:text-slate-200',
                 ].join(' ')}
               >
                 <item.icon size={18} />
@@ -145,7 +141,7 @@ function Nav({ collapsed, onNavigate }: { collapsed: boolean; onNavigate: () => 
               {!collapsed ? <span className="truncate">{item.label}</span> : null}
 
               {/* Indicador lateral: barra colorida visível apenas no estado ativo */}
-              <span className="pointer-events-none absolute inset-y-2 left-0 w-[3px] rounded-r-full bg-brand-600 opacity-0 transition-opacity duration-150 group-[&[aria-current=page]]:opacity-100 dark:bg-brand-400" />
+              <span className="pointer-events-none absolute inset-y-2 left-0 w-[3px] rounded-r-full bg-cyan-600 opacity-0 transition-opacity duration-150 group-[&[aria-current=page]]:opacity-100 dark:bg-cyan-400" />
             </NavLink>
           </li>
         ))}
@@ -161,7 +157,7 @@ function Footer({ collapsed, onAfterLogout }: { collapsed: boolean; onAfterLogou
   return (
     <div
       className={[
-        'mt-auto border-t border-slate-200 py-4 dark:border-slate-800',
+        'mt-auto border-t border-slate-200 py-4 dark:border-slate-800/60',
         collapsed ? 'px-3' : 'px-5',
       ].join(' ')}
     >
@@ -174,18 +170,18 @@ function Footer({ collapsed, onAfterLogout }: { collapsed: boolean; onAfterLogou
             {user.email}
           </div>
           {user.role === 'super_admin' ? (
-            <div className="text-[11px] font-extrabold uppercase tracking-wide text-brand-600 dark:text-brand-400">
+            <div className="text-[11px] font-extrabold uppercase tracking-wide text-cyan-600 dark:text-cyan-400">
               Super Admin
             </div>
           ) : user.role === 'admin' ? (
-            <div className="text-[11px] font-extrabold uppercase tracking-wide text-brand-600 dark:text-brand-400">
+            <div className="text-[11px] font-extrabold uppercase tracking-wide text-cyan-600 dark:text-cyan-400">
               Administrador
             </div>
           ) : null}
         </div>
       ) : null}
       {!collapsed ? (
-        <div className="mb-3 space-y-2 rounded-2xl border border-slate-200 bg-slate-50 px-3 py-2 dark:border-slate-800 dark:bg-slate-900/40">
+        <div className="mb-3 space-y-2 rounded-2xl border border-slate-200 bg-slate-50 px-3 py-2 dark:border-slate-800/60 dark:bg-[#161b22]">
           <p className="text-[10px] font-semibold leading-relaxed text-slate-500 dark:text-slate-400">
             Desenvolvido por Italo Bruno da Silva Fontes
           </p>

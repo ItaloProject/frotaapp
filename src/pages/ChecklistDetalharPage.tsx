@@ -937,7 +937,7 @@ export function ChecklistDetalharPage() {
                 {naoRealizaramFiltrados.map((v) => (
                   <div
                     key={v.placa}
-                    className="group relative overflow-hidden rounded-2xl border border-slate-100 bg-gradient-to-br from-white to-rose-50/35 p-3.5 shadow-sm transition hover:-translate-y-0.5 hover:border-rose-200 hover:shadow-lg dark:border-slate-800 dark:from-slate-950 dark:to-rose-950/10 dark:hover:border-rose-900/70"
+                    className="group relative overflow-hidden rounded-2xl border border-slate-100 bg-gradient-to-br from-white to-rose-50/35 p-3.5 shadow-sm transition hover:-translate-y-0.5 hover:border-rose-200 hover:shadow-lg dark:border-slate-800/60 dark:from-[#0d1117] dark:to-[#161b22] dark:hover:border-rose-900/50"
                   >
                     <div className="absolute inset-y-0 left-0 w-1 bg-rose-400/70 dark:bg-rose-500/70" />
                     <div className="flex items-start gap-3 pl-1">
@@ -1004,7 +1004,7 @@ export function ChecklistDetalharPage() {
                 {realizaramFiltrados.map((v) => (
                   <div
                     key={v.placa}
-                    className="group relative overflow-hidden rounded-2xl border border-slate-100 bg-gradient-to-br from-white to-emerald-50/35 p-3.5 shadow-sm transition hover:-translate-y-0.5 hover:border-emerald-200 hover:shadow-lg dark:border-slate-800 dark:from-slate-950 dark:to-emerald-950/10 dark:hover:border-emerald-900/70"
+                    className="group relative overflow-hidden rounded-2xl border border-slate-100 bg-gradient-to-br from-white to-emerald-50/35 p-3.5 shadow-sm transition hover:-translate-y-0.5 hover:border-emerald-200 hover:shadow-lg dark:border-slate-800/60 dark:from-[#0d1117] dark:to-[#161b22] dark:hover:border-emerald-900/50"
                   >
                     <div className="absolute inset-y-0 left-0 w-1 bg-emerald-400/70 dark:bg-emerald-500/70" />
                     <div className="flex items-start gap-3 pl-1">

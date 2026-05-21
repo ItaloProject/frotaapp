@@ -55,7 +55,7 @@ export function VeiculosStatusPage() {
     <div className="min-h-0 flex-1 overflow-auto">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-5">
         <header className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-950">
-          <div className="bg-gradient-to-r from-[#0b1020] via-[#7f1022] to-[#b51649] p-6 text-white">
+          <div className="bg-gradient-to-r from-[#0d1117] via-cyan-900 to-cyan-600 p-6 text-white">
             <Link
               to="/"
               className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-xs font-black uppercase tracking-widest text-white/90 transition hover:bg-white/15"
@@ -99,7 +99,7 @@ export function VeiculosStatusPage() {
 
         <section className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-950">
           <div className="flex items-center gap-3 border-b border-slate-100 px-5 py-4 dark:border-slate-800">
-            <div className="rounded-2xl bg-[#7f1022]/10 p-3 text-[#7f1022] dark:bg-rose-500/10 dark:text-rose-300">
+            <div className="rounded-2xl bg-cyan-500/10 p-3 text-cyan-700 dark:bg-cyan-400/10 dark:text-cyan-300">
               <ClipboardList size={20} />
             </div>
             <div>
