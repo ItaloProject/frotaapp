@@ -350,6 +350,30 @@ export function LoginPage() {
                 <p className="mt-2 text-sm font-bold text-slate-500 lg:mt-3 lg:text-base">Portal FrotaApp de gestão e apontamentos da frota</p>
               </header>
 
+              {/* Credenciais demo */}
+              <div className={`mb-6 rounded-2xl border p-4 text-xs font-semibold ${isDark ? 'border-slate-700 bg-slate-900/60 text-slate-300' : 'border-slate-200 bg-slate-50 text-slate-600'}`}>
+                <p className={`mb-2 text-[10px] font-black uppercase tracking-widest ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>Acesso demo</p>
+                <div className="space-y-1">
+                  {[
+                    { label: 'Super Admin', email: 'demo@frotaapp.com', pass: 'demo123' },
+                    { label: 'Admin', email: 'admin@frotaapp.com', pass: 'admin123' },
+                    { label: 'Usuário', email: 'user@frotaapp.com', pass: 'user123' },
+                  ].map(({ label, email: e, pass }) => (
+                    <button
+                      key={e}
+                      type="button"
+                      onClick={() => { setEmail(e); setPassword(pass) }}
+                      className={`flex w-full items-center gap-2 rounded-xl px-3 py-2 text-left transition hover:bg-[#b51649]/10 ${isDark ? 'hover:text-white' : 'hover:text-slate-900'}`}
+                    >
+                      <span className={`w-20 shrink-0 text-[10px] font-black uppercase tracking-wide ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>{label}</span>
+                      <span className="font-bold text-[#b51649]">{e}</span>
+                      <span className={isDark ? 'text-slate-500' : 'text-slate-400'}>/</span>
+                      <span className="font-mono font-bold">{pass}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+
               {fromRegistroEspecial ? (
                 <div
                   className="mb-6 rounded-2xl border border-emerald-500/40 bg-emerald-500/10 px-4 py-3 text-center text-sm font-bold text-emerald-800 dark:text-emerald-200"
