@@ -24557,3 +24557,1095 @@ export const MOCK_CHECKLIST_ROWS: MockChecklistRow[] = [
     "temNc": false
   }
 ]
+export type MockVeiculoRow = {
+  placa: string
+  modelo: string
+  base: string
+  supervisor: string
+  coordenador: string
+  responsavel: string
+  processo: string
+}
+
+export const MOCK_FROTA_ATIVA: MockVeiculoRow[] = [
+  {
+    "placa": "ZVP00K2",
+    "modelo": "HILUX",
+    "base": "BASE-A",
+    "supervisor": "RESPONSAVEL-A",
+    "coordenador": "COORD-A",
+    "responsavel": "RESPONSAVEL-A",
+    "processo": "PROC-A"
+  },
+  {
+    "placa": "NCA13Q9",
+    "modelo": "RANGER",
+    "base": "BASE-B",
+    "supervisor": "RESPONSAVEL-B",
+    "coordenador": "COORD-B",
+    "responsavel": "RESPONSAVEL-B",
+    "processo": "PROC-B"
+  },
+  {
+    "placa": "BKM26V6",
+    "modelo": "S10",
+    "base": "BASE-C",
+    "supervisor": "RESPONSAVEL-C",
+    "coordenador": "COORD-C",
+    "responsavel": "RESPONSAVEL-C",
+    "processo": "PROC-C"
+  },
+  {
+    "placa": "QSY39A3",
+    "modelo": "VW/11.180",
+    "base": "BASE-D",
+    "supervisor": "RESPONSAVEL-D",
+    "coordenador": "COORD-D",
+    "responsavel": "RESPONSAVEL-D",
+    "processo": "PROC-D"
+  },
+  {
+    "placa": "DZK42F0",
+    "modelo": "ONIX",
+    "base": "BASE-E",
+    "supervisor": "RESPONSAVEL-E",
+    "coordenador": "COORD-E",
+    "responsavel": "RESPONSAVEL-E",
+    "processo": "PROC-E"
+  },
+  {
+    "placa": "SGW55L7",
+    "modelo": "HONDA BROS",
+    "base": "BASE-F",
+    "supervisor": "RESPONSAVEL-F",
+    "coordenador": "COORD-F",
+    "responsavel": "RESPONSAVEL-F",
+    "processo": "PROC-A"
+  },
+  {
+    "placa": "FPH68R4",
+    "modelo": "MERCEDES MB 1620",
+    "base": "BASE-A",
+    "supervisor": "RESPONSAVEL-G",
+    "coordenador": "COORD-A",
+    "responsavel": "RESPONSAVEL-G",
+    "processo": "PROC-B"
+  },
+  {
+    "placa": "UWU71W1",
+    "modelo": "TORO",
+    "base": "BASE-B",
+    "supervisor": "RESPONSAVEL-H",
+    "coordenador": "COORD-B",
+    "responsavel": "RESPONSAVEL-H",
+    "processo": "PROC-C"
+  },
+  {
+    "placa": "HDF84B8",
+    "modelo": "HB20",
+    "base": "BASE-C",
+    "supervisor": "RESPONSAVEL-A",
+    "coordenador": "COORD-C",
+    "responsavel": "RESPONSAVEL-A",
+    "processo": "PROC-D"
+  },
+  {
+    "placa": "WLS97G5",
+    "modelo": "GOL",
+    "base": "BASE-D",
+    "supervisor": "RESPONSAVEL-B",
+    "coordenador": "COORD-D",
+    "responsavel": "RESPONSAVEL-B",
+    "processo": "PROC-E"
+  },
+  {
+    "placa": "KTD00M2",
+    "modelo": "HILUX",
+    "base": "BASE-E",
+    "supervisor": "RESPONSAVEL-C",
+    "coordenador": "COORD-E",
+    "responsavel": "RESPONSAVEL-C",
+    "processo": "PROC-A"
+  },
+  {
+    "placa": "YAQ13S9",
+    "modelo": "RANGER",
+    "base": "BASE-F",
+    "supervisor": "RESPONSAVEL-D",
+    "coordenador": "COORD-F",
+    "responsavel": "RESPONSAVEL-D",
+    "processo": "PROC-B"
+  },
+  {
+    "placa": "MHB26X6",
+    "modelo": "S10",
+    "base": "BASE-A",
+    "supervisor": "RESPONSAVEL-E",
+    "coordenador": "COORD-A",
+    "responsavel": "RESPONSAVEL-E",
+    "processo": "PROC-C"
+  },
+  {
+    "placa": "AQN39C3",
+    "modelo": "VW/11.180",
+    "base": "BASE-B",
+    "supervisor": "RESPONSAVEL-F",
+    "coordenador": "COORD-B",
+    "responsavel": "RESPONSAVEL-F",
+    "processo": "PROC-D"
+  },
+  {
+    "placa": "PXZ42H0",
+    "modelo": "ONIX",
+    "base": "BASE-C",
+    "supervisor": "RESPONSAVEL-G",
+    "coordenador": "COORD-C",
+    "responsavel": "RESPONSAVEL-G",
+    "processo": "PROC-E"
+  },
+  {
+    "placa": "CEL55N7",
+    "modelo": "HONDA BROS",
+    "base": "BASE-D",
+    "supervisor": "RESPONSAVEL-H",
+    "coordenador": "COORD-D",
+    "responsavel": "RESPONSAVEL-H",
+    "processo": "PROC-A"
+  },
+  {
+    "placa": "RMX68T4",
+    "modelo": "MERCEDES MB 1620",
+    "base": "BASE-E",
+    "supervisor": "RESPONSAVEL-A",
+    "coordenador": "COORD-E",
+    "responsavel": "RESPONSAVEL-A",
+    "processo": "PROC-B"
+  },
+  {
+    "placa": "EUJ71Y1",
+    "modelo": "TORO",
+    "base": "BASE-F",
+    "supervisor": "RESPONSAVEL-B",
+    "coordenador": "COORD-F",
+    "responsavel": "RESPONSAVEL-B",
+    "processo": "PROC-C"
+  },
+  {
+    "placa": "TBV84D8",
+    "modelo": "HB20",
+    "base": "BASE-A",
+    "supervisor": "RESPONSAVEL-C",
+    "coordenador": "COORD-A",
+    "responsavel": "RESPONSAVEL-C",
+    "processo": "PROC-D"
+  },
+  {
+    "placa": "GJG97J5",
+    "modelo": "GOL",
+    "base": "BASE-B",
+    "supervisor": "RESPONSAVEL-D",
+    "coordenador": "COORD-B",
+    "responsavel": "RESPONSAVEL-D",
+    "processo": "PROC-E"
+  },
+  {
+    "placa": "VRT00P2",
+    "modelo": "HILUX",
+    "base": "BASE-C",
+    "supervisor": "RESPONSAVEL-E",
+    "coordenador": "COORD-C",
+    "responsavel": "RESPONSAVEL-E",
+    "processo": "PROC-A"
+  },
+  {
+    "placa": "JYE13U9",
+    "modelo": "RANGER",
+    "base": "BASE-D",
+    "supervisor": "RESPONSAVEL-F",
+    "coordenador": "COORD-D",
+    "responsavel": "RESPONSAVEL-F",
+    "processo": "PROC-B"
+  },
+  {
+    "placa": "XFR26Z6",
+    "modelo": "S10",
+    "base": "BASE-E",
+    "supervisor": "RESPONSAVEL-G",
+    "coordenador": "COORD-E",
+    "responsavel": "RESPONSAVEL-G",
+    "processo": "PROC-C"
+  },
+  {
+    "placa": "LNC39E3",
+    "modelo": "VW/11.180",
+    "base": "BASE-F",
+    "supervisor": "RESPONSAVEL-H",
+    "coordenador": "COORD-F",
+    "responsavel": "RESPONSAVEL-H",
+    "processo": "PROC-D"
+  },
+  {
+    "placa": "ZVP42K0",
+    "modelo": "ONIX",
+    "base": "BASE-A",
+    "supervisor": "RESPONSAVEL-A",
+    "coordenador": "COORD-A",
+    "responsavel": "RESPONSAVEL-A",
+    "processo": "PROC-E"
+  },
+  {
+    "placa": "NCA55Q7",
+    "modelo": "HONDA BROS",
+    "base": "BASE-B",
+    "supervisor": "RESPONSAVEL-B",
+    "coordenador": "COORD-B",
+    "responsavel": "RESPONSAVEL-B",
+    "processo": "PROC-A"
+  },
+  {
+    "placa": "BKM68V4",
+    "modelo": "MERCEDES MB 1620",
+    "base": "BASE-C",
+    "supervisor": "RESPONSAVEL-C",
+    "coordenador": "COORD-C",
+    "responsavel": "RESPONSAVEL-C",
+    "processo": "PROC-B"
+  },
+  {
+    "placa": "QSY71A1",
+    "modelo": "TORO",
+    "base": "BASE-D",
+    "supervisor": "RESPONSAVEL-D",
+    "coordenador": "COORD-D",
+    "responsavel": "RESPONSAVEL-D",
+    "processo": "PROC-C"
+  },
+  {
+    "placa": "DZK84F8",
+    "modelo": "HB20",
+    "base": "BASE-E",
+    "supervisor": "RESPONSAVEL-E",
+    "coordenador": "COORD-E",
+    "responsavel": "RESPONSAVEL-E",
+    "processo": "PROC-D"
+  },
+  {
+    "placa": "SGW97L5",
+    "modelo": "GOL",
+    "base": "BASE-F",
+    "supervisor": "RESPONSAVEL-F",
+    "coordenador": "COORD-F",
+    "responsavel": "RESPONSAVEL-F",
+    "processo": "PROC-E"
+  },
+  {
+    "placa": "FPH00R2",
+    "modelo": "HILUX",
+    "base": "BASE-A",
+    "supervisor": "RESPONSAVEL-G",
+    "coordenador": "COORD-A",
+    "responsavel": "RESPONSAVEL-G",
+    "processo": "PROC-A"
+  },
+  {
+    "placa": "UWU13W9",
+    "modelo": "RANGER",
+    "base": "BASE-B",
+    "supervisor": "RESPONSAVEL-H",
+    "coordenador": "COORD-B",
+    "responsavel": "RESPONSAVEL-H",
+    "processo": "PROC-B"
+  },
+  {
+    "placa": "HDF26B6",
+    "modelo": "S10",
+    "base": "BASE-C",
+    "supervisor": "RESPONSAVEL-A",
+    "coordenador": "COORD-C",
+    "responsavel": "RESPONSAVEL-A",
+    "processo": "PROC-C"
+  },
+  {
+    "placa": "WLS39G3",
+    "modelo": "VW/11.180",
+    "base": "BASE-D",
+    "supervisor": "RESPONSAVEL-B",
+    "coordenador": "COORD-D",
+    "responsavel": "RESPONSAVEL-B",
+    "processo": "PROC-D"
+  },
+  {
+    "placa": "KTD42M0",
+    "modelo": "ONIX",
+    "base": "BASE-E",
+    "supervisor": "RESPONSAVEL-C",
+    "coordenador": "COORD-E",
+    "responsavel": "RESPONSAVEL-C",
+    "processo": "PROC-E"
+  },
+  {
+    "placa": "YAQ55S7",
+    "modelo": "HONDA BROS",
+    "base": "BASE-F",
+    "supervisor": "RESPONSAVEL-D",
+    "coordenador": "COORD-F",
+    "responsavel": "RESPONSAVEL-D",
+    "processo": "PROC-A"
+  },
+  {
+    "placa": "MHB68X4",
+    "modelo": "MERCEDES MB 1620",
+    "base": "BASE-A",
+    "supervisor": "RESPONSAVEL-E",
+    "coordenador": "COORD-A",
+    "responsavel": "RESPONSAVEL-E",
+    "processo": "PROC-B"
+  },
+  {
+    "placa": "AQN71C1",
+    "modelo": "TORO",
+    "base": "BASE-B",
+    "supervisor": "RESPONSAVEL-F",
+    "coordenador": "COORD-B",
+    "responsavel": "RESPONSAVEL-F",
+    "processo": "PROC-C"
+  },
+  {
+    "placa": "PXZ84H8",
+    "modelo": "HB20",
+    "base": "BASE-C",
+    "supervisor": "RESPONSAVEL-G",
+    "coordenador": "COORD-C",
+    "responsavel": "RESPONSAVEL-G",
+    "processo": "PROC-D"
+  },
+  {
+    "placa": "CEL97N5",
+    "modelo": "GOL",
+    "base": "BASE-D",
+    "supervisor": "RESPONSAVEL-H",
+    "coordenador": "COORD-D",
+    "responsavel": "RESPONSAVEL-H",
+    "processo": "PROC-E"
+  },
+  {
+    "placa": "RMX00T2",
+    "modelo": "HILUX",
+    "base": "BASE-E",
+    "supervisor": "RESPONSAVEL-A",
+    "coordenador": "COORD-E",
+    "responsavel": "RESPONSAVEL-A",
+    "processo": "PROC-A"
+  },
+  {
+    "placa": "EUJ13Y9",
+    "modelo": "RANGER",
+    "base": "BASE-F",
+    "supervisor": "RESPONSAVEL-B",
+    "coordenador": "COORD-F",
+    "responsavel": "RESPONSAVEL-B",
+    "processo": "PROC-B"
+  },
+  {
+    "placa": "TBV26D6",
+    "modelo": "S10",
+    "base": "BASE-A",
+    "supervisor": "RESPONSAVEL-C",
+    "coordenador": "COORD-A",
+    "responsavel": "RESPONSAVEL-C",
+    "processo": "PROC-C"
+  },
+  {
+    "placa": "GJG39J3",
+    "modelo": "VW/11.180",
+    "base": "BASE-B",
+    "supervisor": "RESPONSAVEL-D",
+    "coordenador": "COORD-B",
+    "responsavel": "RESPONSAVEL-D",
+    "processo": "PROC-D"
+  },
+  {
+    "placa": "VRT42P0",
+    "modelo": "ONIX",
+    "base": "BASE-C",
+    "supervisor": "RESPONSAVEL-E",
+    "coordenador": "COORD-C",
+    "responsavel": "RESPONSAVEL-E",
+    "processo": "PROC-E"
+  },
+  {
+    "placa": "JYE55U7",
+    "modelo": "HONDA BROS",
+    "base": "BASE-D",
+    "supervisor": "RESPONSAVEL-F",
+    "coordenador": "COORD-D",
+    "responsavel": "RESPONSAVEL-F",
+    "processo": "PROC-A"
+  },
+  {
+    "placa": "XFR68Z4",
+    "modelo": "MERCEDES MB 1620",
+    "base": "BASE-E",
+    "supervisor": "RESPONSAVEL-G",
+    "coordenador": "COORD-E",
+    "responsavel": "RESPONSAVEL-G",
+    "processo": "PROC-B"
+  },
+  {
+    "placa": "LNC71E1",
+    "modelo": "TORO",
+    "base": "BASE-F",
+    "supervisor": "RESPONSAVEL-H",
+    "coordenador": "COORD-F",
+    "responsavel": "RESPONSAVEL-H",
+    "processo": "PROC-C"
+  },
+  {
+    "placa": "ZVP84K8",
+    "modelo": "HB20",
+    "base": "BASE-A",
+    "supervisor": "RESPONSAVEL-A",
+    "coordenador": "COORD-A",
+    "responsavel": "RESPONSAVEL-A",
+    "processo": "PROC-D"
+  },
+  {
+    "placa": "NCA97Q5",
+    "modelo": "GOL",
+    "base": "BASE-B",
+    "supervisor": "RESPONSAVEL-B",
+    "coordenador": "COORD-B",
+    "responsavel": "RESPONSAVEL-B",
+    "processo": "PROC-E"
+  },
+  {
+    "placa": "BKM00V2",
+    "modelo": "HILUX",
+    "base": "BASE-C",
+    "supervisor": "RESPONSAVEL-C",
+    "coordenador": "COORD-C",
+    "responsavel": "RESPONSAVEL-C",
+    "processo": "PROC-A"
+  },
+  {
+    "placa": "QSY13A9",
+    "modelo": "RANGER",
+    "base": "BASE-D",
+    "supervisor": "RESPONSAVEL-D",
+    "coordenador": "COORD-D",
+    "responsavel": "RESPONSAVEL-D",
+    "processo": "PROC-B"
+  },
+  {
+    "placa": "DZK26F6",
+    "modelo": "S10",
+    "base": "BASE-E",
+    "supervisor": "RESPONSAVEL-E",
+    "coordenador": "COORD-E",
+    "responsavel": "RESPONSAVEL-E",
+    "processo": "PROC-C"
+  },
+  {
+    "placa": "SGW39L3",
+    "modelo": "VW/11.180",
+    "base": "BASE-F",
+    "supervisor": "RESPONSAVEL-F",
+    "coordenador": "COORD-F",
+    "responsavel": "RESPONSAVEL-F",
+    "processo": "PROC-D"
+  },
+  {
+    "placa": "FPH42R0",
+    "modelo": "ONIX",
+    "base": "BASE-A",
+    "supervisor": "RESPONSAVEL-G",
+    "coordenador": "COORD-A",
+    "responsavel": "RESPONSAVEL-G",
+    "processo": "PROC-E"
+  },
+  {
+    "placa": "UWU55W7",
+    "modelo": "HONDA BROS",
+    "base": "BASE-B",
+    "supervisor": "RESPONSAVEL-H",
+    "coordenador": "COORD-B",
+    "responsavel": "RESPONSAVEL-H",
+    "processo": "PROC-A"
+  },
+  {
+    "placa": "HDF68B4",
+    "modelo": "MERCEDES MB 1620",
+    "base": "BASE-C",
+    "supervisor": "RESPONSAVEL-A",
+    "coordenador": "COORD-C",
+    "responsavel": "RESPONSAVEL-A",
+    "processo": "PROC-B"
+  },
+  {
+    "placa": "WLS71G1",
+    "modelo": "TORO",
+    "base": "BASE-D",
+    "supervisor": "RESPONSAVEL-B",
+    "coordenador": "COORD-D",
+    "responsavel": "RESPONSAVEL-B",
+    "processo": "PROC-C"
+  },
+  {
+    "placa": "KTD84M8",
+    "modelo": "HB20",
+    "base": "BASE-E",
+    "supervisor": "RESPONSAVEL-C",
+    "coordenador": "COORD-E",
+    "responsavel": "RESPONSAVEL-C",
+    "processo": "PROC-D"
+  },
+  {
+    "placa": "YAQ97S5",
+    "modelo": "GOL",
+    "base": "BASE-F",
+    "supervisor": "RESPONSAVEL-D",
+    "coordenador": "COORD-F",
+    "responsavel": "RESPONSAVEL-D",
+    "processo": "PROC-E"
+  },
+  {
+    "placa": "MHB00X2",
+    "modelo": "HILUX",
+    "base": "BASE-A",
+    "supervisor": "RESPONSAVEL-E",
+    "coordenador": "COORD-A",
+    "responsavel": "RESPONSAVEL-E",
+    "processo": "PROC-A"
+  },
+  {
+    "placa": "AQN13C9",
+    "modelo": "RANGER",
+    "base": "BASE-B",
+    "supervisor": "RESPONSAVEL-F",
+    "coordenador": "COORD-B",
+    "responsavel": "RESPONSAVEL-F",
+    "processo": "PROC-B"
+  },
+  {
+    "placa": "PXZ26H6",
+    "modelo": "S10",
+    "base": "BASE-C",
+    "supervisor": "RESPONSAVEL-G",
+    "coordenador": "COORD-C",
+    "responsavel": "RESPONSAVEL-G",
+    "processo": "PROC-C"
+  },
+  {
+    "placa": "CEL39N3",
+    "modelo": "VW/11.180",
+    "base": "BASE-D",
+    "supervisor": "RESPONSAVEL-H",
+    "coordenador": "COORD-D",
+    "responsavel": "RESPONSAVEL-H",
+    "processo": "PROC-D"
+  },
+  {
+    "placa": "RMX42T0",
+    "modelo": "ONIX",
+    "base": "BASE-E",
+    "supervisor": "RESPONSAVEL-A",
+    "coordenador": "COORD-E",
+    "responsavel": "RESPONSAVEL-A",
+    "processo": "PROC-E"
+  },
+  {
+    "placa": "EUJ55Y7",
+    "modelo": "HONDA BROS",
+    "base": "BASE-F",
+    "supervisor": "RESPONSAVEL-B",
+    "coordenador": "COORD-F",
+    "responsavel": "RESPONSAVEL-B",
+    "processo": "PROC-A"
+  },
+  {
+    "placa": "TBV68D4",
+    "modelo": "MERCEDES MB 1620",
+    "base": "BASE-A",
+    "supervisor": "RESPONSAVEL-C",
+    "coordenador": "COORD-A",
+    "responsavel": "RESPONSAVEL-C",
+    "processo": "PROC-B"
+  },
+  {
+    "placa": "GJG71J1",
+    "modelo": "TORO",
+    "base": "BASE-B",
+    "supervisor": "RESPONSAVEL-D",
+    "coordenador": "COORD-B",
+    "responsavel": "RESPONSAVEL-D",
+    "processo": "PROC-C"
+  },
+  {
+    "placa": "VRT84P8",
+    "modelo": "HB20",
+    "base": "BASE-C",
+    "supervisor": "RESPONSAVEL-E",
+    "coordenador": "COORD-C",
+    "responsavel": "RESPONSAVEL-E",
+    "processo": "PROC-D"
+  },
+  {
+    "placa": "JYE97U5",
+    "modelo": "GOL",
+    "base": "BASE-D",
+    "supervisor": "RESPONSAVEL-F",
+    "coordenador": "COORD-D",
+    "responsavel": "RESPONSAVEL-F",
+    "processo": "PROC-E"
+  },
+  {
+    "placa": "XFR00Z2",
+    "modelo": "HILUX",
+    "base": "BASE-E",
+    "supervisor": "RESPONSAVEL-G",
+    "coordenador": "COORD-E",
+    "responsavel": "RESPONSAVEL-G",
+    "processo": "PROC-A"
+  },
+  {
+    "placa": "LNC13E9",
+    "modelo": "RANGER",
+    "base": "BASE-F",
+    "supervisor": "RESPONSAVEL-H",
+    "coordenador": "COORD-F",
+    "responsavel": "RESPONSAVEL-H",
+    "processo": "PROC-B"
+  },
+  {
+    "placa": "ZVP26K6",
+    "modelo": "S10",
+    "base": "BASE-A",
+    "supervisor": "RESPONSAVEL-A",
+    "coordenador": "COORD-A",
+    "responsavel": "RESPONSAVEL-A",
+    "processo": "PROC-C"
+  },
+  {
+    "placa": "NCA39Q3",
+    "modelo": "VW/11.180",
+    "base": "BASE-B",
+    "supervisor": "RESPONSAVEL-B",
+    "coordenador": "COORD-B",
+    "responsavel": "RESPONSAVEL-B",
+    "processo": "PROC-D"
+  },
+  {
+    "placa": "BKM42V0",
+    "modelo": "ONIX",
+    "base": "BASE-C",
+    "supervisor": "RESPONSAVEL-C",
+    "coordenador": "COORD-C",
+    "responsavel": "RESPONSAVEL-C",
+    "processo": "PROC-E"
+  },
+  {
+    "placa": "QSY55A7",
+    "modelo": "HONDA BROS",
+    "base": "BASE-D",
+    "supervisor": "RESPONSAVEL-D",
+    "coordenador": "COORD-D",
+    "responsavel": "RESPONSAVEL-D",
+    "processo": "PROC-A"
+  },
+  {
+    "placa": "DZK68F4",
+    "modelo": "MERCEDES MB 1620",
+    "base": "BASE-E",
+    "supervisor": "RESPONSAVEL-E",
+    "coordenador": "COORD-E",
+    "responsavel": "RESPONSAVEL-E",
+    "processo": "PROC-B"
+  },
+  {
+    "placa": "SGW71L1",
+    "modelo": "TORO",
+    "base": "BASE-F",
+    "supervisor": "RESPONSAVEL-F",
+    "coordenador": "COORD-F",
+    "responsavel": "RESPONSAVEL-F",
+    "processo": "PROC-C"
+  },
+  {
+    "placa": "FPH84R8",
+    "modelo": "HB20",
+    "base": "BASE-A",
+    "supervisor": "RESPONSAVEL-G",
+    "coordenador": "COORD-A",
+    "responsavel": "RESPONSAVEL-G",
+    "processo": "PROC-D"
+  },
+  {
+    "placa": "UWU97W5",
+    "modelo": "GOL",
+    "base": "BASE-B",
+    "supervisor": "RESPONSAVEL-H",
+    "coordenador": "COORD-B",
+    "responsavel": "RESPONSAVEL-H",
+    "processo": "PROC-E"
+  },
+  {
+    "placa": "HDF00B2",
+    "modelo": "HILUX",
+    "base": "BASE-C",
+    "supervisor": "RESPONSAVEL-A",
+    "coordenador": "COORD-C",
+    "responsavel": "RESPONSAVEL-A",
+    "processo": "PROC-A"
+  },
+  {
+    "placa": "WLS13G9",
+    "modelo": "RANGER",
+    "base": "BASE-D",
+    "supervisor": "RESPONSAVEL-B",
+    "coordenador": "COORD-D",
+    "responsavel": "RESPONSAVEL-B",
+    "processo": "PROC-B"
+  },
+  {
+    "placa": "KTD26M6",
+    "modelo": "S10",
+    "base": "BASE-E",
+    "supervisor": "RESPONSAVEL-C",
+    "coordenador": "COORD-E",
+    "responsavel": "RESPONSAVEL-C",
+    "processo": "PROC-C"
+  },
+  {
+    "placa": "YAQ39S3",
+    "modelo": "VW/11.180",
+    "base": "BASE-F",
+    "supervisor": "RESPONSAVEL-D",
+    "coordenador": "COORD-F",
+    "responsavel": "RESPONSAVEL-D",
+    "processo": "PROC-D"
+  },
+  {
+    "placa": "MHB42X0",
+    "modelo": "ONIX",
+    "base": "BASE-A",
+    "supervisor": "RESPONSAVEL-E",
+    "coordenador": "COORD-A",
+    "responsavel": "RESPONSAVEL-E",
+    "processo": "PROC-E"
+  },
+  {
+    "placa": "AQN55C7",
+    "modelo": "HONDA BROS",
+    "base": "BASE-B",
+    "supervisor": "RESPONSAVEL-F",
+    "coordenador": "COORD-B",
+    "responsavel": "RESPONSAVEL-F",
+    "processo": "PROC-A"
+  },
+  {
+    "placa": "PXZ68H4",
+    "modelo": "MERCEDES MB 1620",
+    "base": "BASE-C",
+    "supervisor": "RESPONSAVEL-G",
+    "coordenador": "COORD-C",
+    "responsavel": "RESPONSAVEL-G",
+    "processo": "PROC-B"
+  },
+  {
+    "placa": "CEL71N1",
+    "modelo": "TORO",
+    "base": "BASE-D",
+    "supervisor": "RESPONSAVEL-H",
+    "coordenador": "COORD-D",
+    "responsavel": "RESPONSAVEL-H",
+    "processo": "PROC-C"
+  },
+  {
+    "placa": "RMX84T8",
+    "modelo": "HB20",
+    "base": "BASE-E",
+    "supervisor": "RESPONSAVEL-A",
+    "coordenador": "COORD-E",
+    "responsavel": "RESPONSAVEL-A",
+    "processo": "PROC-D"
+  },
+  {
+    "placa": "EUJ97Y5",
+    "modelo": "GOL",
+    "base": "BASE-F",
+    "supervisor": "RESPONSAVEL-B",
+    "coordenador": "COORD-F",
+    "responsavel": "RESPONSAVEL-B",
+    "processo": "PROC-E"
+  },
+  {
+    "placa": "TBV00D2",
+    "modelo": "HILUX",
+    "base": "BASE-A",
+    "supervisor": "RESPONSAVEL-C",
+    "coordenador": "COORD-A",
+    "responsavel": "RESPONSAVEL-C",
+    "processo": "PROC-A"
+  },
+  {
+    "placa": "GJG13J9",
+    "modelo": "RANGER",
+    "base": "BASE-B",
+    "supervisor": "RESPONSAVEL-D",
+    "coordenador": "COORD-B",
+    "responsavel": "RESPONSAVEL-D",
+    "processo": "PROC-B"
+  },
+  {
+    "placa": "VRT26P6",
+    "modelo": "S10",
+    "base": "BASE-C",
+    "supervisor": "RESPONSAVEL-E",
+    "coordenador": "COORD-C",
+    "responsavel": "RESPONSAVEL-E",
+    "processo": "PROC-C"
+  },
+  {
+    "placa": "JYE39U3",
+    "modelo": "VW/11.180",
+    "base": "BASE-D",
+    "supervisor": "RESPONSAVEL-F",
+    "coordenador": "COORD-D",
+    "responsavel": "RESPONSAVEL-F",
+    "processo": "PROC-D"
+  },
+  {
+    "placa": "XFR42Z0",
+    "modelo": "ONIX",
+    "base": "BASE-E",
+    "supervisor": "RESPONSAVEL-G",
+    "coordenador": "COORD-E",
+    "responsavel": "RESPONSAVEL-G",
+    "processo": "PROC-E"
+  },
+  {
+    "placa": "LNC55E7",
+    "modelo": "HONDA BROS",
+    "base": "BASE-F",
+    "supervisor": "RESPONSAVEL-H",
+    "coordenador": "COORD-F",
+    "responsavel": "RESPONSAVEL-H",
+    "processo": "PROC-A"
+  },
+  {
+    "placa": "ZVP68K4",
+    "modelo": "MERCEDES MB 1620",
+    "base": "BASE-A",
+    "supervisor": "RESPONSAVEL-A",
+    "coordenador": "COORD-A",
+    "responsavel": "RESPONSAVEL-A",
+    "processo": "PROC-B"
+  },
+  {
+    "placa": "NCA71Q1",
+    "modelo": "TORO",
+    "base": "BASE-B",
+    "supervisor": "RESPONSAVEL-B",
+    "coordenador": "COORD-B",
+    "responsavel": "RESPONSAVEL-B",
+    "processo": "PROC-C"
+  },
+  {
+    "placa": "BKM84V8",
+    "modelo": "HB20",
+    "base": "BASE-C",
+    "supervisor": "RESPONSAVEL-C",
+    "coordenador": "COORD-C",
+    "responsavel": "RESPONSAVEL-C",
+    "processo": "PROC-D"
+  },
+  {
+    "placa": "QSY97A5",
+    "modelo": "GOL",
+    "base": "BASE-D",
+    "supervisor": "RESPONSAVEL-D",
+    "coordenador": "COORD-D",
+    "responsavel": "RESPONSAVEL-D",
+    "processo": "PROC-E"
+  },
+  {
+    "placa": "DZK00F2",
+    "modelo": "HILUX",
+    "base": "BASE-E",
+    "supervisor": "RESPONSAVEL-E",
+    "coordenador": "COORD-E",
+    "responsavel": "RESPONSAVEL-E",
+    "processo": "PROC-A"
+  },
+  {
+    "placa": "SGW13L9",
+    "modelo": "RANGER",
+    "base": "BASE-F",
+    "supervisor": "RESPONSAVEL-F",
+    "coordenador": "COORD-F",
+    "responsavel": "RESPONSAVEL-F",
+    "processo": "PROC-B"
+  },
+  {
+    "placa": "FPH26R6",
+    "modelo": "S10",
+    "base": "BASE-A",
+    "supervisor": "RESPONSAVEL-G",
+    "coordenador": "COORD-A",
+    "responsavel": "RESPONSAVEL-G",
+    "processo": "PROC-C"
+  },
+  {
+    "placa": "UWU39W3",
+    "modelo": "VW/11.180",
+    "base": "BASE-B",
+    "supervisor": "RESPONSAVEL-H",
+    "coordenador": "COORD-B",
+    "responsavel": "RESPONSAVEL-H",
+    "processo": "PROC-D"
+  },
+  {
+    "placa": "HDF42B0",
+    "modelo": "ONIX",
+    "base": "BASE-C",
+    "supervisor": "RESPONSAVEL-A",
+    "coordenador": "COORD-C",
+    "responsavel": "RESPONSAVEL-A",
+    "processo": "PROC-E"
+  },
+  {
+    "placa": "WLS55G7",
+    "modelo": "HONDA BROS",
+    "base": "BASE-D",
+    "supervisor": "RESPONSAVEL-B",
+    "coordenador": "COORD-D",
+    "responsavel": "RESPONSAVEL-B",
+    "processo": "PROC-A"
+  },
+  {
+    "placa": "KTD68M4",
+    "modelo": "MERCEDES MB 1620",
+    "base": "BASE-E",
+    "supervisor": "RESPONSAVEL-C",
+    "coordenador": "COORD-E",
+    "responsavel": "RESPONSAVEL-C",
+    "processo": "PROC-B"
+  },
+  {
+    "placa": "YAQ71S1",
+    "modelo": "TORO",
+    "base": "BASE-F",
+    "supervisor": "RESPONSAVEL-D",
+    "coordenador": "COORD-F",
+    "responsavel": "RESPONSAVEL-D",
+    "processo": "PROC-C"
+  },
+  {
+    "placa": "MHB84X8",
+    "modelo": "HB20",
+    "base": "BASE-A",
+    "supervisor": "RESPONSAVEL-E",
+    "coordenador": "COORD-A",
+    "responsavel": "RESPONSAVEL-E",
+    "processo": "PROC-D"
+  },
+  {
+    "placa": "AQN97C5",
+    "modelo": "GOL",
+    "base": "BASE-B",
+    "supervisor": "RESPONSAVEL-F",
+    "coordenador": "COORD-B",
+    "responsavel": "RESPONSAVEL-F",
+    "processo": "PROC-E"
+  },
+  {
+    "placa": "PXZ00H2",
+    "modelo": "HILUX",
+    "base": "BASE-C",
+    "supervisor": "RESPONSAVEL-G",
+    "coordenador": "COORD-C",
+    "responsavel": "RESPONSAVEL-G",
+    "processo": "PROC-A"
+  },
+  {
+    "placa": "CEL13N9",
+    "modelo": "RANGER",
+    "base": "BASE-D",
+    "supervisor": "RESPONSAVEL-H",
+    "coordenador": "COORD-D",
+    "responsavel": "RESPONSAVEL-H",
+    "processo": "PROC-B"
+  },
+  {
+    "placa": "RMX26T6",
+    "modelo": "S10",
+    "base": "BASE-E",
+    "supervisor": "RESPONSAVEL-A",
+    "coordenador": "COORD-E",
+    "responsavel": "RESPONSAVEL-A",
+    "processo": "PROC-C"
+  },
+  {
+    "placa": "EUJ39Y3",
+    "modelo": "VW/11.180",
+    "base": "BASE-F",
+    "supervisor": "RESPONSAVEL-B",
+    "coordenador": "COORD-F",
+    "responsavel": "RESPONSAVEL-B",
+    "processo": "PROC-D"
+  },
+  {
+    "placa": "TBV42D0",
+    "modelo": "ONIX",
+    "base": "BASE-A",
+    "supervisor": "RESPONSAVEL-C",
+    "coordenador": "COORD-A",
+    "responsavel": "RESPONSAVEL-C",
+    "processo": "PROC-E"
+  },
+  {
+    "placa": "GJG55J7",
+    "modelo": "HONDA BROS",
+    "base": "BASE-B",
+    "supervisor": "RESPONSAVEL-D",
+    "coordenador": "COORD-B",
+    "responsavel": "RESPONSAVEL-D",
+    "processo": "PROC-A"
+  },
+  {
+    "placa": "VRT68P4",
+    "modelo": "MERCEDES MB 1620",
+    "base": "BASE-C",
+    "supervisor": "RESPONSAVEL-E",
+    "coordenador": "COORD-C",
+    "responsavel": "RESPONSAVEL-E",
+    "processo": "PROC-B"
+  },
+  {
+    "placa": "JYE71U1",
+    "modelo": "TORO",
+    "base": "BASE-D",
+    "supervisor": "RESPONSAVEL-F",
+    "coordenador": "COORD-D",
+    "responsavel": "RESPONSAVEL-F",
+    "processo": "PROC-C"
+  },
+  {
+    "placa": "XFR84Z8",
+    "modelo": "HB20",
+    "base": "BASE-E",
+    "supervisor": "RESPONSAVEL-G",
+    "coordenador": "COORD-E",
+    "responsavel": "RESPONSAVEL-G",
+    "processo": "PROC-D"
+  },
+  {
+    "placa": "LNC97E5",
+    "modelo": "GOL",
+    "base": "BASE-F",
+    "supervisor": "RESPONSAVEL-H",
+    "coordenador": "COORD-F",
+    "responsavel": "RESPONSAVEL-H",
+    "processo": "PROC-E"
+  }
+]

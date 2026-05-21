@@ -371,7 +371,27 @@ export function ChecklistDetalharPage() {
   const periodDays = useMemo(() => listDaysInPeriod(limites.ini, limites.fim), [limites])
   const diasNoPeriodo = periodDays.length
 
+  const [mockFrotaAtiva, setMockFrotaAtiva] = useState<Map<string, VeiculoRow>>(() => new Map())
+
   useEffect(() => {
+    void import('../apontamentos/mockData').then(({ MOCK_FROTA_ATIVA }) => {
+      const m = new Map<string, VeiculoRow>()
+      for (const v of MOCK_FROTA_ATIVA) {
+        const placa = normPlaca(v.placa)
+        if (placa) m.set(placa, { placa, modelo: v.modelo, base: v.base, supervisor: v.supervisor, coordenador: v.coordenador, responsavel: v.responsavel, processo: v.processo })
+      }
+      setMockFrotaAtiva(m)
+    })
+  }, [])
+
+  // frotaMap efetivo: FleetContext quando disponível, senão fallback do mock
+  const frotaMapEfetivo = useMemo(() => {
+    if (frotaMap.size > 0) return frotaMap
+    return mockFrotaAtiva
+  }, [frotaMap, mockFrotaAtiva])
+
+  useEffect(() => {
+    if (frotaMapEfetivo.size === 0) return
     setLoading(true)
     void import('../apontamentos/mockData').then(({ MOCK_CHECKLIST_ROWS }) => {
       const completions = new Set<string>()
@@ -384,9 +404,9 @@ export function ChecklistDetalharPage() {
       for (const row of filtered) {
         const placa = normPlaca(row.placa)
         if (!placa) continue
-        const frotaInfo = frotaMap.get(placa)
         completions.add(`${placa}|${row.data}`)
         if (seen.has(placa)) continue
+        const frotaInfo = frotaMapEfetivo.get(placa)
         seen.set(placa, {
           placa,
           modelo: frotaInfo?.modelo ?? row.modelo,
@@ -405,7 +425,7 @@ export function ChecklistDetalharPage() {
       setRawChecklists(Array.from(seen.values()))
       setLoading(false)
     })
-  }, [limites, frotaMap])
+  }, [limites, frotaMapEfetivo])
 
   // ── aplicar filtros ───────────────────────────────────────────────────────
   const passaFiltros = useCallback(
@@ -430,13 +450,13 @@ export function ChecklistDetalharPage() {
   )
 
   const placasNaoRealizaram = useMemo(
-    () => Array.from(frotaMap.values()).filter((v) => !placasRealizaramSet.has(v.placa) && passaFiltros(v)),
-    [frotaMap, placasRealizaramSet, passaFiltros],
+    () => Array.from(frotaMapEfetivo.values()).filter((v) => !placasRealizaramSet.has(v.placa) && passaFiltros(v)),
+    [frotaMapEfetivo, placasRealizaramSet, passaFiltros],
   )
 
   const frotaFiltrada = useMemo(
-    () => Array.from(frotaMap.values()).filter(passaFiltros),
-    [frotaMap, passaFiltros],
+    () => Array.from(frotaMapEfetivo.values()).filter(passaFiltros),
+    [frotaMapEfetivo, passaFiltros],
   )
 
   // ── busca ─────────────────────────────────────────────────────────────────
