@@ -195,7 +195,7 @@ function GomanLogo({
           variant === 'dark' ? 'text-sky-300' : 'text-[#1E3A8A] dark:text-blue-400'
         }`}
       >
-        Frota Web
+        FrotaApp
       </span>
     </div>
   )
