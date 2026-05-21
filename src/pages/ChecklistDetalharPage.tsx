@@ -35,7 +35,6 @@ import { listDaysInPeriod } from '../checklists/checklistTop10Ranking'
 import { downloadDataUrl, generateRankingScreenshot } from '../checklists/generateRankingScreenshot'
 import { getVehicleOperationalStatusRowsWithLocals, getVehicleOperationalStatusSummary } from '../frota/vehicleOperationalStatus'
 import { useFleet } from '../frota/FleetContext'
-import { supabase } from '../lib/supabase'
 
 // ─── helpers ───────────────────────────────────────────────────────────────
 
@@ -373,53 +372,39 @@ export function ChecklistDetalharPage() {
   const diasNoPeriodo = periodDays.length
 
   useEffect(() => {
-    let cancelled = false
     setLoading(true)
-    void supabase
-      .from('checklists')
-      .select('dados_veiculo, data_inspecao, nc_count, created_at')
-      .eq('progresso', 100)
-      .gte('data_inspecao', limites.ini)
-      .lte('data_inspecao', limites.fim)
-      .order('created_at', { ascending: false })
-      .then(({ data }: { data: import('../lib/supabase').ChecklistRow[] | null }) => {
-        if (cancelled) return
-        if (!data) { setRawChecklists([]); setChecklistCompletionsByDay(new Set()); setLoading(false); return }
+    void import('../apontamentos/mockData').then(({ MOCK_CHECKLIST_ROWS }) => {
+      const completions = new Set<string>()
+      const seen = new Map<string, ChecklistRow>()
 
-        const completions = new Set<string>()
-        // deduplicar por placa — mantém o mais recente por período
-        const seen = new Map<string, ChecklistRow>()
-        for (const row of data) {
-          const dv = row.dados_veiculo && typeof row.dados_veiculo === 'object'
-            ? (row.dados_veiculo as Record<string, unknown>)
-            : {}
-          const placa = normPlaca(String(dv.placa ?? ''))
-          if (!placa) continue
-          const frotaInfo = frotaMap.get(placa)
-          if (!frotaInfo) continue          // ignora checklists de veículos fora da frota ativa
-          const dataInspecao = (row.data_inspecao as string).slice(0, 10)
-          if (dataInspecao) completions.add(`${placa}|${dataInspecao}`)
-          if (seen.has(placa)) continue
-          seen.set(placa, {
-            placa,
-            modelo: String(dv.modelo ?? dv.veiculo ?? frotaInfo?.modelo ?? '—'),
-            base: frotaInfo?.base ?? String(dv.base ?? ''),
-            supervisor: frotaInfo?.supervisor ?? '',
-            coordenador: frotaInfo?.coordenador ?? '',
-            responsavel: frotaInfo?.responsavel ?? '',
-            processo: frotaInfo?.processo ?? '',
-            data: (row.data_inspecao as string).slice(0, 10),
-            hora: row.created_at
-              ? new Date(row.created_at as string).toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })
-              : '—',
-            temNc: (row.nc_count as number) > 0,
-          })
-        }
-        setChecklistCompletionsByDay(completions)
-        setRawChecklists(Array.from(seen.values()))
-        setLoading(false)
-      })
-    return () => { cancelled = true }
+      const filtered = MOCK_CHECKLIST_ROWS.filter(
+        (r) => r.data >= limites.ini && r.data <= limites.fim,
+      )
+
+      for (const row of filtered) {
+        const placa = normPlaca(row.placa)
+        if (!placa) continue
+        const frotaInfo = frotaMap.get(placa)
+        completions.add(`${placa}|${row.data}`)
+        if (seen.has(placa)) continue
+        seen.set(placa, {
+          placa,
+          modelo: frotaInfo?.modelo ?? row.modelo,
+          base: frotaInfo?.base ?? row.base,
+          supervisor: frotaInfo?.supervisor ?? row.supervisor,
+          coordenador: frotaInfo?.coordenador ?? row.coordenador,
+          responsavel: frotaInfo?.responsavel ?? row.responsavel,
+          processo: frotaInfo?.processo ?? '',
+          data: row.data,
+          hora: row.hora,
+          temNc: row.temNc,
+        })
+      }
+
+      setChecklistCompletionsByDay(completions)
+      setRawChecklists(Array.from(seen.values()))
+      setLoading(false)
+    })
   }, [limites, frotaMap])
 
   // ── aplicar filtros ───────────────────────────────────────────────────────
