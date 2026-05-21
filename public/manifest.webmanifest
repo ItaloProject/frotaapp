@@ -1,0 +1,45 @@
+{
+  "name": "FrotaApp — Checklists",
+  "short_name": "FrotaApp",
+  "description": "Gestão de frota e checklists — funciona offline.",
+  "start_url": "/checklist",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0b1020",
+  "theme_color": "#0b1020",
+  "icons": [
+    {
+      "src": "/branding/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/branding/app-icon-any.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/branding/app-icon-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Preencher checklist",
+      "short_name": "Checklist",
+      "url": "/checklist",
+      "icons": [
+        {
+          "src": "/branding/app-icon-any.png",
+          "sizes": "512x512",
+          "type": "image/png"
+        }
+      ]
+    }
+  ]
+}
