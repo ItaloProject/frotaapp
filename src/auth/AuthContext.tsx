@@ -5,6 +5,7 @@ export type AuthUser = {
   email: string
   role: 'super_admin' | 'admin' | 'user'
   mustChangePassword: boolean
+  isDemo?: boolean
 }
 
 type Ctx = {
@@ -42,7 +43,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       email: match.email,
       role: match.role,
       mustChangePassword: false,
+      isDemo: true,
     })
+    try { sessionStorage.setItem('frota.demo.start', String(Date.now())) } catch { /* ignore */ }
     return { ok: true }
   }, [])
 

@@ -1,6 +1,6 @@
 import { useEffect, useId, useMemo, useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
-import { ArrowLeft, CheckCircle2, Eye, EyeOff, Loader2, Lock, LogIn, Mail, Moon, Sun } from 'lucide-react'
+import { ArrowLeft, CheckCircle2, Clock, Eye, EyeOff, Loader2, Lock, LogIn, Mail, Moon, ShieldCheck, Sun, User, Zap } from 'lucide-react'
 import { useAuth } from '../auth/AuthContext'
 import { supabase } from '../lib/supabase'
 import { BrandLogo } from '../branding/BrandLogo'
@@ -351,26 +351,69 @@ export function LoginPage() {
               </header>
 
               {/* Credenciais demo */}
-              <div className={`mb-6 rounded-2xl border p-4 text-xs font-semibold ${isDark ? 'border-slate-800/80 bg-[#161b22] text-slate-300' : 'border-slate-200 bg-slate-50 text-slate-600'}`}>
-                <p className={`mb-2 text-[10px] font-black uppercase tracking-widest ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>Acesso demo</p>
-                <div className="space-y-1">
-                  {[
-                    { label: 'Super Admin', email: 'demo@frotaapp.com', pass: 'demo123' },
-                    { label: 'Admin', email: 'admin@frotaapp.com', pass: 'admin123' },
-                    { label: 'Usuário', email: 'user@frotaapp.com', pass: 'user123' },
-                  ].map(({ label, email: e, pass }) => (
-                    <button
-                      key={e}
-                      type="button"
-                      onClick={() => { setEmail(e); setPassword(pass) }}
-                      className={`flex w-full items-center gap-2 rounded-xl px-3 py-2 text-left transition hover:bg-cyan-500/10 ${isDark ? 'hover:text-white' : 'hover:text-slate-900'}`}
-                    >
-                      <span className={`w-20 shrink-0 text-[10px] font-black uppercase tracking-wide ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>{label}</span>
-                      <span className="font-bold text-cyan-500 dark:text-cyan-400">{e}</span>
-                      <span className={isDark ? 'text-slate-500' : 'text-slate-400'}>/</span>
-                      <span className="font-mono font-bold">{pass}</span>
-                    </button>
-                  ))}
+              <div className="relative mb-6 overflow-hidden rounded-2xl">
+                {/* Borda gradiente */}
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-500/40 via-cyan-400/20 to-emerald-500/30 p-px">
+                  <div className={`h-full w-full rounded-2xl ${isDark ? 'bg-[#0d1117]' : 'bg-white'}`} />
+                </div>
+                {/* Glow de fundo */}
+                <div className="pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full bg-cyan-500/10 blur-2xl" />
+                <div className="pointer-events-none absolute -bottom-6 -left-6 h-24 w-24 rounded-full bg-emerald-500/10 blur-2xl" />
+
+                <div className="relative p-4">
+                  {/* Header da seção demo */}
+                  <div className="mb-3 flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-to-br from-cyan-500 to-emerald-500 shadow-md shadow-cyan-900/30">
+                        <Zap size={13} strokeWidth={3} className="text-white" />
+                      </div>
+                      <span className={`text-[10px] font-black uppercase tracking-[0.22em] ${isDark ? 'text-cyan-300' : 'text-cyan-600'}`}>
+                        Acesso Demo
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-1.5 rounded-full border border-cyan-400/25 bg-cyan-500/10 px-2.5 py-1 text-[9px] font-black uppercase tracking-widest text-cyan-400">
+                      <Clock size={10} strokeWidth={3} />
+                      5 min
+                    </div>
+                  </div>
+
+                  <p className={`mb-3 text-[11px] font-semibold leading-snug ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
+                    Clique em um perfil para preencher automaticamente.
+                  </p>
+
+                  <div className="space-y-1.5">
+                    {[
+                      { label: 'Super Admin', icon: ShieldCheck, email: 'demo@frotaapp.com', pass: 'demo123', color: 'cyan' as const },
+                      { label: 'Admin', icon: Lock, email: 'admin@frotaapp.com', pass: 'admin123', color: 'emerald' as const },
+                      { label: 'Usuário', icon: User, email: 'user@frotaapp.com', pass: 'user123', color: 'slate' as const },
+                    ].map(({ label, icon: Icon, email: e, pass, color }) => {
+                      const badge = {
+                        cyan: isDark ? 'bg-cyan-500/15 text-cyan-300 border-cyan-500/25' : 'bg-cyan-50 text-cyan-700 border-cyan-200',
+                        emerald: isDark ? 'bg-emerald-500/15 text-emerald-300 border-emerald-500/25' : 'bg-emerald-50 text-emerald-700 border-emerald-200',
+                        slate: isDark ? 'bg-slate-700/50 text-slate-300 border-slate-600/40' : 'bg-slate-100 text-slate-600 border-slate-200',
+                      }[color]
+                      const hover = isDark
+                        ? 'hover:bg-white/[0.05] hover:border-white/10'
+                        : 'hover:bg-slate-50 hover:border-slate-200'
+                      return (
+                        <button
+                          key={e}
+                          type="button"
+                          onClick={() => { setEmail(e); setPassword(pass) }}
+                          className={`group flex w-full items-center gap-2.5 rounded-xl border border-transparent px-3 py-2.5 text-left transition-all ${hover}`}
+                        >
+                          <span className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border text-[10px] ${badge}`}>
+                            <Icon size={11} strokeWidth={2.5} />
+                          </span>
+                          <span className={`w-[72px] shrink-0 text-[10px] font-black uppercase tracking-wide ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
+                            {label}
+                          </span>
+                          <span className="min-w-0 flex-1 truncate text-[11px] font-bold text-cyan-500 dark:text-cyan-400">{e}</span>
+                          <span className={`shrink-0 font-mono text-[11px] font-bold ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>{pass}</span>
+                        </button>
+                      )
+                    })}
+                  </div>
                 </div>
               </div>
 

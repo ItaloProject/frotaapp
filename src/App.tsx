@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react'
 import { Navigate, Route, Routes, useParams } from 'react-router-dom'
 import { RequireAuth } from './components/auth/RequireAuth'
 import { RequireSuperAdmin } from './components/auth/RequireAdmin'
+import { DemoTimerOverlay } from './components/auth/DemoTimerOverlay'
 import { AppShell } from './components/layout/AppShell'
 import { RouteFallback } from './components/RouteFallback'
 import { ApontamentosLayout } from './layouts/ApontamentosLayout'
@@ -15,6 +16,7 @@ function AuthedShellWithTour() {
       <AppShell />
       <TourOverlay />
       <TourLauncher />
+      <DemoTimerOverlay />
     </>
   )
 }
